@@ -9,6 +9,14 @@ Builderhub Platform Material UI Theme
 - Custom typography
 - Custom MuiCssBaseline
 
+React.js 혹은 Next.js 프로젝트에서 Builderhub UI/UX 팀에서 정의한 Color scheme과 breakpoint 등을 정의한 Material UI `ThemeProvider`를 사용합니다.
+
+### Peer Dependencies
+
+- `react@^18`
+- `react-dom@^18`
+- `@mui/material^5`
+
 ## Installation
 
 - npm
