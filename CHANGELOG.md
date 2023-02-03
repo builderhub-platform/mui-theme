@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/builderhub-platform/mui-theme/compare/v1.1.3...v1.1.4) (2023-02-03)
+
+### Bug Fixes
+
+- **package.json:** meta information ([a0984ec](https://github.com/builderhub-platform/mui-theme/commit/a0984ec694a46bc1df4e5df8091b9672897c4af5))
+
 ### [1.1.3](https://github.com/builderhub-platform/mui-theme/compare/v1.1.2...v1.1.3) (2023-02-03)
 
 ### [1.1.2](https://github.com/eunchurn/mui-theme/compare/v1.1.1...v1.1.2) (2023-02-03)
