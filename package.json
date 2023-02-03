@@ -15,9 +15,23 @@
     "prepare": "husky install",
     "release": "standard-version"
   },
-  "keywords": [],
+  "keywords": [
+    "materialui",
+    "builderhub",
+    "themeprovider",
+    "react",
+    "next"
+  ],
   "author": "Builderhub Platform Dev Team",
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "homepage": "https://github.com/builderhub-platform/mui-theme#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builderhub-platform/mui-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/builderhub-platform/mui-theme/issues"
+  },
   "lint-staged": {
     "*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
       "prettier --write"
