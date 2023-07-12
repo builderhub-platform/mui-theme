@@ -36,15 +36,11 @@ type TypographyProperty = {
   fontSize: number;
 };
 
-type TypographyValues = {
+export type CustomTypographyOptions = Pick<ThemeOptions, "typography"> & {
   [key in TypographyKey]: TypographyProperty;
-};
-
-export interface CustomTypographyOptions
-  extends Pick<ThemeOptions, "typography">,
-    TypographyValues {
+} & {
   fontFamily: string;
-}
+};
 export interface CustomThemeOptions
   extends Omit<ThemeOptions, "palette" | "typography"> {
   palette?: Partial<CustomPaletteOptions>;
