@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/builderhub-platform/mui-theme/compare/v1.2.1...v1.2.2) (2023-07-12)
+
+### Bug Fixes
+
+- **typography:** interface to type ([98775e2](https://github.com/builderhub-platform/mui-theme/commit/98775e2ee3d05657caf9b45d7866e1ed8f426085))
+
 ### [1.2.1](https://github.com/builderhub-platform/mui-theme/compare/v1.2.0...v1.2.1) (2023-07-12)
 
 ## [1.2.0](https://github.com/builderhub-platform/mui-theme/compare/v1.1.4...v1.2.0) (2023-07-12)
