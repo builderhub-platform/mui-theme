@@ -3,6 +3,7 @@ import {
   createTheme,
   ThemeOptions,
   PaletteOptions,
+  BreakpointsOptions,
 } from "@mui/material/styles";
 import { colors, Colors } from "./colors";
 
@@ -16,14 +17,62 @@ export interface CustomPaletteOptions
       "primary" | "secondary" | "success" | "warning" | "error"
     >,
     Colors {}
+enum TypographyKey {
+  display48 = "display48",
+  title20 = "title20",
+  subTitle18 = "subTitle18",
+  body16 = "body16",
+  body15 = "body15",
+  body14 = "body14",
+  body13 = "body13",
+  caption12 = "caption12",
+  caption10 = "caption10",
+}
 
-export interface CustomThemeOptions extends Omit<ThemeOptions, "palette"> {
+type TypographyProperty = {
+  fontFamily: string;
+  fontStyle: string;
+  fontWeight: number;
+  fontSize: number;
+};
+
+type TypographyValues = {
+  [key in TypographyKey]: TypographyProperty;
+};
+
+export interface CustomTypographyOptions
+  extends Pick<ThemeOptions, "typography">,
+    TypographyValues {
+  fontFamily: string;
+}
+export interface CustomThemeOptions
+  extends Omit<ThemeOptions, "palette" | "typography"> {
   palette?: Partial<CustomPaletteOptions>;
+  typography?: CustomTypographyOptions;
+  breakpoints?: CustomBreakpointsOptions;
+}
+
+interface CustomBreakpointsValues {
+  xs: number;
+  sm: number;
+  md: number;
+  lg: number;
+  xl: number;
+  mobile: number;
+  tablet: number;
+  laptop: number;
+}
+
+export interface CustomBreakpointsOptions
+  extends Omit<BreakpointsOptions, "values"> {
+  values: CustomBreakpointsValues;
 }
 
 declare module "@mui/material/styles" {
   interface Theme {
     palette: CustomPaletteOptions;
+    typography: CustomTypographyOptions;
+    breakpoints: CustomBreakpointsOptions;
   }
   interface ThemeOption extends CustomThemeOptions {}
 }
@@ -40,16 +89,73 @@ const fontFamily = [
   "-apple-system",
   "sans-serif",
 ].join(", ");
-const customTypography = {
+const customTypography: CustomTypographyOptions = {
   fontFamily,
+  display48: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 700,
+    fontSize: 48,
+  },
+  title20: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 500,
+    fontSize: 20,
+  },
+  subTitle18: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 18,
+  },
+  body16: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 16,
+  },
+  body15: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 15,
+  },
+  body14: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 14,
+  },
+  body13: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 13,
+  },
+  caption12: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 12,
+  },
+  caption10: {
+    fontFamily,
+    fontStyle: "normal",
+    fontWeight: 400,
+    fontSize: 10,
+  },
 };
-const customBreakpoints = {
+const customBreakpoints: CustomBreakpointsOptions = {
   values: {
     xs: 0,
     sm: 600,
     md: 900,
     lg: 1200,
     xl: 1536,
+    mobile: 0,
+    tablet: 768,
+    laptop: 1280,
   },
 };
 
