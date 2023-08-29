@@ -184,7 +184,7 @@ export const themeOptions: ThemeOptions = {
     },
   },
   palette: customPalette,
-  typography: { ...customTypography },
+  typography: { ...customTypography, htmlFontSize: 16 },
   breakpoints: {
     ...customBreakpoints,
   },
