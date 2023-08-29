@@ -3,7 +3,7 @@ import {
   createTheme,
   ThemeOptions,
   PaletteOptions,
-  BreakpointsOptions,
+  Breakpoints,
 } from "@mui/material/styles";
 import { colors, Colors } from "./colors";
 
@@ -59,8 +59,7 @@ interface CustomBreakpointsValues {
   laptop: number;
 }
 
-export interface CustomBreakpointsOptions
-  extends Omit<BreakpointsOptions, "values"> {
+export interface CustomBreakpointsOptions extends Omit<Breakpoints, "values"> {
   values: CustomBreakpointsValues;
 }
 
@@ -142,7 +141,7 @@ const customTypography: CustomTypographyOptions = {
     fontSize: 10,
   },
 };
-const customBreakpoints: CustomBreakpointsOptions = {
+const customBreakpoints: Pick<CustomBreakpointsOptions, "values"> = {
   values: {
     xs: 0,
     sm: 600,
