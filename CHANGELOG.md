@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.4](https://github.com/builderhub-platform/mui-theme/compare/v1.2.3...v1.2.4) (2023-08-29)
+
+### Bug Fixes
+
+- **fontSize:** body html root font size 16px ([73eb154](https://github.com/builderhub-platform/mui-theme/commit/73eb154ae25fcbb92962fc8708d80486fa3d9c29))
+
 ### [1.2.3](https://github.com/builderhub-platform/mui-theme/compare/v1.2.2...v1.2.3) (2023-07-12)
 
 ### [1.2.2](https://github.com/builderhub-platform/mui-theme/compare/v1.2.1...v1.2.2) (2023-07-12)
